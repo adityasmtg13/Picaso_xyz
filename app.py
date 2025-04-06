@@ -43,4 +43,4 @@ def chat():
         return jsonify({'response': "Sorry, I'm having trouble responding right now. Please try again."})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000, debug=True)
+    app.run(host='0.0.0.0', port=10000, debug=True)
