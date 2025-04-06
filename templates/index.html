@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICASO AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page (shown by default) -->
+    <div id="landing-page" class="landing-container">
+        <div class="logo">
+            <i class="fas fa-robot"></i>
+            <h1>PICASO</h1>
+        </div>
+        <div class="full-form">
+            <p>Proactive Intelligent Chatbot Assisting in Smart Operations</p>
+        </div>
+        <div class="description">
+            <p>PICASO is an advanced AI assistant that can:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Answer complex questions</li>
+                <li><i class="fas fa-check-circle"></i> Assist with coding problems</li>
+                <li><i class="fas fa-check-circle"></i> Provide learning resources</li>
+                <li><i class="fas fa-check-circle"></i> Help with daily tasks</li>
+            </ul>
+        </div>
+        <button id="enter-btn" class="enter-button">
+            Use Chatbot <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <!-- Chat Interface (hidden by default) -->
+    <div id="chat-interface" class="container" style="display:none">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+            </div>
+            <h1>PICASO AI Assistant</h1>
+            <p>Proactive Intelligent Chatbot Assisting in Smart Operations</p>
+        </div>
+        
+        <div id="chat-container"></div>
+        
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type or speak your message..." autocomplete="off">
+            <div class="voice-controls">
+                <button id="voice-btn" class="voice-btn" title="Voice Input">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
+            <button id="send-button">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="footer">
+         | PICASO v1.2 | Built by Rohith and Aditya
+    </div>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
