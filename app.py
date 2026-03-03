@@ -1,13 +1,18 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import google.generativeai as genai
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+print("API KEY:", os.getenv("GEMINI_API_KEY"))
 
 app = Flask(__name__, static_url_path='/static')
 CORS(app)
 
 # Configure Gemini
-genai.configure(api_key="AIzaSyBwWG5ueiTzGSXkd_9u8SO1Wk0CYVzIZRw")  # Replace with your key
-model = genai.GenerativeModel('gemini-2.0-flash')
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 def clean_response(text):
     """Remove markdown symbols from the response"""
